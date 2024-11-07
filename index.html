@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BlueBird Taxi</title>
+
+  <!-- import css custome file -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+  <!-- header section starts -->
+  <header class="header">
+    <div id="menu-btn" class="fa-solid fa-bars"></div>
+
+    <a href="#" class="logo">Blue<span>Bird</span></a>
+
+    <!-- navbar section -->
+    <nav class="navbar" ng-repeat="nav in dataNavbar">
+      <a href="#{{ nav.link }}">{{ nav.name }}</a>
+    </nav>
+
+    <!-- login button -->
+    <div id="login-btn">
+      <button type="button" class="btn">login</button>
+      <i class="fa-regular fa-user"></i>
+    </div>
+  </header>
+  <!-- header section ends -->
+
+  <!-- login form -->
+  <div class="login-form-container">
+    <span class="fa-solid fa-xmark" id="close-login-btn"></span>
+
+    <form action="">
+      <h3>user login</h3>
+      <input type="email" placeholder="email" class="box" />
+      <input type="password" placeholder="password" class="box" />
+      <p>forget your password <a href="#">click here</a></p>
+      <input type="submit" value="login now" class="btn" />
+      <p>or login with</p>
+      <div class="buttons">
+        <a href="#" class="btn">google</a>
+        <a href="#" class="btn">facebook</a>
+      </div>
+      <p>don't have an account <a href="#">create one</a></p>
+    </form>
+  </div>
+
+  <!-- home section starts -->
+  <section class="home" id="home">
+    <h1 class="home-parallax" data-speed="-2">Solutions for every trip</h1>
+    <img class="home-parallax" data-speed="5" src="./image/taxicuy.png" alt="" />
+  </section>
+  <!-- home section end -->
+
+  <!-- icon section starts -->
+  <section class="icons-container">
+    <div class="icons">
+      <i class="fa-solid fa-house"></i>
+      <div class="content">
+        <h3>100+</h3>
+        <p>branches</p>
+      </div>
+    </div>
+
+    <div class="icons">
+      <i class="fa-solid fa-users"></i>
+      <div class="content">
+        <h3>500+</h3>
+        <p>happy clients</p>
+      </div>
+    </div>
+
+    <div class="icons">
+      <i class="fa-solid fa-car"></i>
+      <div class="content">
+        <h3>390+</h3>
+        <p>new taxi</p>
+      </div>
+    </div>
+  </section>
+  <!-- icon section end -->
+
+  <!-- vehical section starts-->
+  <section class="vehical" id="vehicles">
+    <h1 class="heading">popular <span>taxi</span></h1>
+
+    <div class="slider">
+      <div class="wrapper">
+        <div class="fa-solid fa-angle-left preNext" id="preBtn"></div>
+
+        <div class="wraper-box">
+          <div class="box active" id="car-img1">
+            <img src="./image/taxi1.png" alt="" />
+            <div class="content">
+              <h3>Limo</h3>
+
+              <p>
+                4 Seats<br>
+                Charging Port</br>
+              </p>
+
+              </p>
+              <a href="#" class="btn">check out</a>
+            </div>
+          </div>
+
+          <div class="box" id="car-img2">
+            <img src="./image/taxi2.png" alt="" />
+            <div class="content">
+              <h3>Mobilio</h3>
+              <p>
+                7 Seats<br>
+                Charging Port</br>
+              </p>
+              <a href="#" class="btn">check out</a>
+            </div>
+          </div>
+
+          <div class="box" id="car-img3">
+            <img src="./image/taxi3.png" alt="" />
+            <div class="content">
+              <h3>Transmover</h3>
+              <p>
+                7 Seats<br>
+                Charging Port</br>
+              </p>
+              <a href="#" class="btn">check out</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="fa-solid fa-angle-right preNext" id="nextBtn"></div>
+      </div>
+
+      <div class="activeCircle">
+        <div class="fa-regular fa-solid fa-circle" id="forCar-img1"></div>
+        <div class="fa-regular fa-circle" id="forCar-img2"></div>
+        <div class="fa-regular fa-circle" id="forCar-img3"></div>
+      </div>
+    </div>
+  </section>
+  <!-- vehical section end-->
+
+  <!-- services section starts -->
+  <section class="services" id="services">
+    <h1 class="heading">our <span>services</span></h1>
+
+    <div class="box-container">
+      <div class="box">
+        <i class="fa-solid fa-car"></i>
+        <h3>Vehicle Selection</h3>
+        <p>
+          Some services allow you to choose the type of vehicle, such as
+          regular taxi, ride-sharing, or luxury car, depending on availability
+          in your area.
+        </p>
+        <a href="#" class="btn">read more</a>
+      </div>
+
+      <div class="box">
+        <i class="fa-solid fa-headset"></i>
+        <h3>24/7 support</h3>
+        <p>
+          Ensures that customer support is available 24/7 for the taxi
+          service.
+        </p>
+        <a href="#" class="btn">read more</a>
+      </div>
+    </div>
+  </section>
+  <!-- services section end -->
+
+  <!-- featured section starts -->
+  <section class="featured" id="featured">
+    <h1 class="heading"><span>featured</span> cars</h1>
+
+    <div class="featured-slider">
+      <div class="featured-wrapper">
+        <div class="fa-solid fa-angle-left preNext" id="fPreBtn"></div>
+
+        <div class="featured-wrapper2">
+          <div class="featured-wrapper-box">
+            <div class="box active">
+              <img src="./image/taxi1.png" alt="" />
+              <h3>Limo</h3>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <a href="#" class="btn">check out</a>
+            </div>
+
+            <div class="box">
+              <img src="./image/taxi2.png" alt="" />
+              <h3>Mobilio</h3>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <a href="#" class="btn">check out</a>
+            </div>
+
+            <div class="box">
+              <img src="./image/taxi3.png" alt="" />
+              <h3>Transmover</h3>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <a href="#" class="btn">check out</a>
+            </div>
+
+            <div class="box">
+              <img src="./image/taxi4.png" alt="" />
+              <h3>BYD E6</h3>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <a href="#" class="btn">check out</a>
+            </div>
+
+            <div class="box">
+              <img src="./image/taxi5.png" alt="" />
+              <h3>BYD T3</h3>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <a href="#" class="btn">check out</a>
+            </div>
+
+            <div class="box">
+              <img src="./image/taxi6.png" alt="" />
+              <h3>Serena</h3>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <a href="#" class="btn">check out</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="fa-solid fa-angle-right preNext" id="fNextBtn"></div>
+      </div>
+
+      <div class="fActCircle">
+        <div class="fa-regular fa-solid fa-circle"></div>
+        <div class="fa-regular fa-circle"></div>
+        <div class="fa-regular fa-circle"></div>
+        <div class="fa-regular fa-circle"></div>
+        <div class="fa-regular fa-circle"></div>
+      </div>
+    </div>
+  </section>
+  <!-- featured section end -->
+
+  <!-- subscribe section starts -->
+  <section class="subscribe">
+    <h3>Subscribe for latest updates</h3>
+
+    <p>
+      If you'd like to stay updated on the latest developments regarding our
+      taxi service, please provide your email so that we can send you updates
+      whenever there are new developments or information.
+    </p>
+
+    <form action="">
+      <input type="email" placeholder="enter your email" />
+
+      <input type="submit" placeholder="subBtn" />
+    </form>
+  </section>
+  <!-- subscribe section end -->
+
+  <!-- review section starts -->
+  <section class="reviews" id="reviews">
+    <h1 class="heading">client's <span>review</span></h1>
+
+    <div class="review-slider">
+      <div class="fa-solid fa-angle-left rPreNext" id="rPreBtn"></div>
+      <div class="review-wrapper">
+        <div class="review-wrapper-box">
+          <div class="box active">
+            <img src="./image/kyungsoo.jpeg" alt="" />
+            <div class="content">
+              <p>
+                Reliable and efficient service.
+              </p>
+              <h3>Do Kyungsoo</h3>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="box">
+            <img src="./image/mark.jpg" alt="" />
+            <div class="content">
+              <p>
+                Outstanding! The 24/7 customer support was a lifesaver
+              </p>
+              <h3>Mark Lee</h3>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="box">
+            <img src="./image/hueningkai.jpg" alt="" />
+            <div class="content">
+              <p>
+                Exceptional service! The taxi arrived promptly
+              </p>
+              <h3>Hueningkai</h3>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fa-solid fa-angle-right rPreNext" id="rNextBtn"></div>
+
+      <div class="rActCircle">
+        <div class="fa-regular fa-solid fa-circle"></div>
+        <div class="fa-regular fa-circle"></div>
+        <div class="fa-regular fa-circle"></div>
+
+      </div>
+    </div>
+  </section>
+  <!-- review section end -->
+
+  <!-- contact section starts -->
+  <section class="contact" id="contact">
+    <h1 class="heading"><span>contact</span> us</h1>
+
+    <div class="row">
+      <iframe class="map"
+        src="https://maps.google.com/maps?q=universitas%20tarumanagara&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+      <form action="">
+        <h3>get in touch</h3>
+        <input type="text" placeholder="name" class="box" />
+        <input type="email" placeholder="email" class="box" />
+        <textarea class="box" cols="30" rows="10" placeholder="message"></textarea>
+        <input type="submit" value="send message" class="btn" />
+      </form>
+    </div>
+  </section>
+  <!-- contact section end -->
+
+  <!-- footer section starts -->
+  <section class="footer">
+    <div class="footer-box-container">
+      <div class="box">
+        <h3>our branches</h3>
+        <a href="#"><i class="fa-solid fa-location-dot"></i> Jakarta</a>
+        <a href="#"><i class="fa-solid fa-location-dot"></i> Tangerang</a>
+        <a href="#"><i class="fa-solid fa-location-dot"></i> Bandung</a>
+        <a href="#"><i class="fa-solid fa-location-dot"></i> Surabaya</a>
+        <a href="#"><i class="fa-solid fa-location-dot"></i> Dll</a>
+      </div>
+
+      <div class="box">
+        <h3>quick links</h3>
+        <div ng-repeat="menu in dataNavbar">
+          <a href="#{{ menu.link }}"><i class="fa-solid fa-arrow-right"></i> {{ menu.name }}</a>
+        </div>
+      </div>
+
+      <div class="box">
+        <h3>quick links</h3>
+        <a href="#"><i class="fa-solid fa-phone"></i> {{ hp }}</a>
+        <a href="#"><i class="fa-solid fa-envelope"></i> {{ email }}</a>
+        <a href="#"><i class="fa-solid fa-location-dot"></i> {{ alamat }}</a>
+      </div>
+
+      <div class="box">
+        <h3>social media</h3>
+        <a href="#"><i class="fa-brands fa-facebook-f"></i> facebook</a>
+        <a href="#"><i class="fa-brands fa-instagram"></i> instagram</a>
+        <a href="#"><i class="fa-brands fa-twitter"></i> twitter</a>
+      </div>
+    </div>
+
+    <div class="copyright">copyright &copy; | all rights reserved</div>
+  </section>
+  <!-- footer section end -->
+
+  <!-- font awsome link -->
+  <script src="https://kit.fontawesome.com/ca9a6c5a17.js" crossorigin="anonymous"></script>
+
+  <!-- import javascript custome file -->
+  <script src="js/script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script>
+    var app = angular.module("myApp", []);
+    app.controller("myCtrl", function ($scope) {
+      $scope.dataNavbar = [
+        { link: 'home', name: 'Home' },
+        { link: 'vehicles', name: 'Vehicles' },
+        { link: 'services', name: 'Services' },
+        { link: 'featured', name: 'Featured' },
+        { link: 'reviews', name: 'Reviews' },
+        { link: 'contact', name: 'Contact' }];
+      $scope.hp = "08123456789";
+      $scope.email = "bluebird@gmail.com";
+      $scope.alamat = "Jakarta, Indonesia";
+    });
+  </script>
+</body>
+
+</html>
